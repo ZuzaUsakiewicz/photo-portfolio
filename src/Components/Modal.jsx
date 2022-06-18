@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import ReactPortal from "./ReactPortal";
-import { ModalContainer, ModalContent } from "./styles/Modal.styled";
+import {
+  ModalContainer,
+  ModalContent,
+  ModalButton,
+} from "./styles/Modal.styled";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 function Modal({ children, isOpen, handleClose }) {
   useEffect(() => {
@@ -16,9 +21,9 @@ function Modal({ children, isOpen, handleClose }) {
   return (
     <ReactPortal wrapperId="react-portal-modal-container">
       <ModalContainer>
-        <button onClick={handleClose} className="close-btn">
-          Close
-        </button>
+        <ModalButton onClick={handleClose}>
+          <IoCloseCircleOutline />
+        </ModalButton>
         <ModalContent>{children}</ModalContent>
       </ModalContainer>
     </ReactPortal>
