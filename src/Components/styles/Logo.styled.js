@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LogoIcon = styled.div`
   font-size: ${({ size }) => (size ? size : 1)}rem;
-  color: black;
+  color: ${({ theme }) => theme.colors.action};
   position: relative;
   top: ${({ top }) => (top ? top : 0)}rem;
   left: ${({ left }) => (left ? left : 0)}rem;
