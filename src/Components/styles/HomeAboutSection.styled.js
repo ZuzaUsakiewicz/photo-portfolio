@@ -13,6 +13,7 @@ export const Photo = styled.div`
     url(${Photographer}) center center / cover;
   height: 50vh;
   position: relative;
+  border-radius: 8px 8px 0 0;
   span {
     position: absolute;
     top: 4rem;
